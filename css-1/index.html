@@ -4,6 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="https://use.typekit.net/vdi5qvx.css">
+        <link rel="stylesheet" href="https://osteopathic.org/wp-content/themes/osteopathic/dist/styles/main.css?ver=1647897738">
         <link rel="stylesheet" href="./styles.css">
         <title>Blobs</title>
     </head>
@@ -59,19 +60,23 @@
                 </div>
             </div> <!-- .blobs     -->
 
-            <div class="super-fig wrap">
+            <div class="super-fig" id="superFig">
                 <div class="super-fig__body">
                     <h5 class="super-fig__kicker">Our mission</h5>
                     <h1 class="super-fig__title">You take care of patients. We take care of you.</h1>
                     <p class="super-fig__blurb">Serving as the professional home for more than 151,000 osteopathic physicians and medical students, the AOA works to advance the distinctive philosophy and practice of osteopathic medicine. <a class="super-fig__link" href="#">Why belong?</a></p>
                 </div>
-                <figure class="super-fig__fig">
-                    <img class="super-fig__image" src="./doctor-with-patient-1.png" alt="Doctor with patient">
+                <figure class="super-fig__fig reveal" id="superFigFig">
+                    <img id="superImage" class="super-fig__image" width="1205" height="995" src="./doctor-with-patient-1.webp" alt="Doctor with patient">
+                    <div class="super-fig__bg"></div>
                 </figure>
             </div> <!-- .wrap -->
         </div> <!-- .super -->
 
         <!-- Dummy placeholder -->
         <div class="etc wrap"></div>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="./index.js" charset="utf-8"></script>
     </body>
 </html>
