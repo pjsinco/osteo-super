@@ -11,18 +11,18 @@
     <body>
         <div class="super">
             <div class="blobs">
-                <div class="blob blob--blue">
-                    <svg viewBox="0 0 1200 728">
+                <div class="blob blob--blue" id="blobBlue">
+                    <svg viewBox="0 0 200 200">
                         <defs>
                             <linearGradient id="linearGradientBlue" gradientTransform="rotate(90)">
                                 <stop offset="0%" stop-color="var(--blueStartColor)" />
                                 <stop offset="100%" stop-color="var(--blueStopColor)" />
                             </linearGradient>
                         </defs>
-                        <path fill="url('#linearGradientBlue')" d="M848.824092,208.591055 C926.559783,256.835667 1019.7781,265.901769 1092.35292,293.100074 C1164.92773,320.136484 1216.85904,365.305097 1194.92532,403.997924 C1172.9916,442.69075 1077.19284,475.069685 996.231606,494.982729 C915.270367,514.733879 849.469201,522.181034 793.667232,529.142505 C737.542708,536.103976 692.062491,542.903552 588.522421,593.0909 C484.982351,643.278248 323.704984,737.177158 277.257102,727.463478 C230.486665,717.749797 298.868269,604.423527 339.187611,534.323134 C379.506953,464.222742 391.764033,437.348226 308.867466,386.351405 C225.970899,335.354583 47.9206856,260.235456 8.56900794,191.106431 C-30.460115,121.977406 69.2092981,58.6765895 198.553747,25.4881818 C327.898195,-7.70022583 487.240234,-10.7762246 597.876508,31.31639 C708.512782,73.2471099 771.088401,160.508338 848.824092,208.591055" ></path>
+                        <path fill="url('#linearGradientBlue')" d="" ></path>
                     </svg>
                 </div>
-                <div class="blob blob--yellow">
+                <div class="blob blob--yellow" id="blobYellow">
                     <svg viewBox="0 0 1061 849" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                         <defs>
                             <linearGradient id="linearGradientYellow" x1="38.1926253%" y1="24.5610282%" x2="29.8517024%" y2="63.0225006%">
@@ -33,7 +33,7 @@
                         <path fill="url(#linearGradientYellow)" fill-rule="nonzero" style="mix-blend-mode: lighten;" d="M737.775074,158.084208 C802.914891,239.551048 815.012285,316.793682 886.666084,412.140057 C958.319883,506.882975 1090.46065,620.333093 1055.09904,681.282358 C1018.80686,742.231624 815.942854,750.076578 640.995917,779.042566 C465.118412,808.008554 318.088539,858.095574 207.35085,835.164167 C96.6131617,812.23276 22.1676566,716.282926 4.48684915,630.59188 C-13.1939583,545.504292 24.959363,470.67549 56.5987027,403.088186 C88.2380423,334.897424 114.293969,273.948158 176.64208,192.481318 C238.059621,110.41102 335.769347,9.03006411 444.645898,0.581651077 C552.59188,-7.86676195 671.704688,77.2208264 737.775074,158.084208 Z" ></path>
                     </svg>
                 </div>
-                <div class="blob blob--sea">
+                <div class="blob blob--sea" id="blobSea">
                     <svg viewBox="0 0 1525 836" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                         <defs>
                             <linearGradient id="linearGradientSea" x1="74.4121809%" y1="35.117463%" x2="50%" y2="64.882537%">
@@ -44,7 +44,7 @@
                         <path fill="url(#linearGradientSea)" fill-rule="nonzero" d="M1140.28348,230.746604 C1232.15075,271.570456 1341.46117,291.69489 1422.86255,335.393661 C1504.26393,379.092433 1558.91914,446.365541 1500.7753,483.73949 C1443.79433,521.113439 1274.01431,528.588229 1155.40088,601.611176 C1037.95032,674.634122 970.503458,813.205226 873.98468,833.32966 C777.465902,853.454094 651.875203,755.706843 557.682178,678.659009 C463.489154,601.611176 403.019558,545.837744 291.383381,475.114733 C179.747204,403.816737 19.270199,318.144146 1.82704629,226.721717 C-16.7789832,135.874272 108.811716,39.8519717 283.243243,12.8277316 C457.674769,-14.7714924 680.947124,26.6273436 828.632483,77.8009046 C976.317842,128.974466 1049.57908,189.922752 1140.28348,230.746604 Z" ></path>
                     </svg>
                 </div>
-                <div class="blob blob--white">
+                <div class="blob blob--white" id="blobWhite">
                     <svg viewBox="0 0 1069 920" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                         <defs>
                             <linearGradient x1="0%" y1="50%" x2="100%" y2="50%" id="linearGradientWhite">
@@ -74,6 +74,6 @@
         <div class="etc wrap"></div>
 
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-        <script src="./index.js" charset="utf-8"></script>
+        <script src="./index.js" type="module"></script>
     </body>
 </html>
