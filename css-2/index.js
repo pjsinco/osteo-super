@@ -8,7 +8,10 @@ document.addEventListener('DOMContentLoaded', superReveal, false);
  *
  */
 const pathBlue = document.querySelector('#blobBlue path');
+console.log(pathBlue);
 const root = document.documentElement;
+
+const paths = document.querySelectorAll('#blobs > [id^="blob"] path');
 
 function createPoints() {
   const points = [];
@@ -35,6 +38,11 @@ function createPoints() {
 }
 
 const points = createPoints();
+
+const pointsArr = Array.from(paths).map(path => {
+  return createPoints();
+});
+
 const simplex = new SimplexNoise();
 let noiseStep = 0.0005;
 
@@ -43,23 +51,25 @@ function noise(x, y) {
 }
 
 (function animate() {
-  pathBlue.setAttribute('d', spline(points, 1, true));
+  paths.forEach((path, idx) => {
+    path.setAttribute('d', spline(pointsArr[idx], 1, true));
 
-  for (var i = 0, len = points.length; i < len; i++) {
-    const point = points[i];
+    for (var i = 0, len = pointsArr[idx].length; i < len; i++) {
+      const point = pointsArr[idx][i];
 
-    const nX = noise(point.noiseOffsetX, point.noiseOffsetX);
-    const nY = noise(point.noiseOffsetY, point.noiseOffsetY);
+      const nX = noise(point.noiseOffsetX, point.noiseOffsetX);
+      const nY = noise(point.noiseOffsetY, point.noiseOffsetY);
 
-    const x = map(nX, -1, 1, point.originX - 20, point.originX + 20);
-    const y = map(nY, -1, 1, point.originY - 20, point.originY + 20);
+      const x = map(nX, -1, 1, point.originX - 20, point.originX + 20);
+      const y = map(nY, -1, 1, point.originY - 20, point.originY + 20);
 
-    point.x = x;
-    point.y = y;
+      point.x = x;
+      point.y = y;
 
-    point.noiseOffsetX += noiseStep;
-    point.noiseOffsetY += noiseStep;
-  }
+      point.noiseOffsetX += noiseStep;
+      point.noiseOffsetY += noiseStep;
+    }
+  });
 
   requestAnimationFrame(animate);
 })();

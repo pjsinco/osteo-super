@@ -87,8 +87,6 @@ img {
   width: 1200px;
   top: 189px;
   left: 677px;
-
-  z-index: 10; /* TODO temp */
 }
 
 .blob--yellow {

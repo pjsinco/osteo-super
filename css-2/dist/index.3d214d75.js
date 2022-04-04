@@ -523,7 +523,9 @@ document.addEventListener('DOMContentLoaded', superReveal, false);
  * Help from: https://georgefrancis.dev/writing/build-a-smooth-animated-blob-with-svg-and-js/
  *
  */ const pathBlue = document.querySelector('#blobBlue path');
+console.log(pathBlue);
 const root = document.documentElement;
+const paths = document.querySelectorAll('#blobs > [id^="blob"] path');
 function createPoints() {
     const points1 = [];
     const numPoints = 6;
@@ -545,24 +547,29 @@ function createPoints() {
     return points1;
 }
 const points = createPoints();
+const pointsArr = Array.from(paths).map((path)=>{
+    return createPoints();
+});
 const simplex = new _simplexNoiseDefault.default();
 let noiseStep = 0.0005;
 function noise(x, y) {
     return simplex.noise2D(x, y);
 }
 (function animate() {
-    pathBlue.setAttribute('d', _spline.spline(points, 1, true));
-    for(var i = 0, len = points.length; i < len; i++){
-        const point = points[i];
-        const nX = noise(point.noiseOffsetX, point.noiseOffsetX);
-        const nY = noise(point.noiseOffsetY, point.noiseOffsetY);
-        const x = map(nX, -1, 1, point.originX - 20, point.originX + 20);
-        const y = map(nY, -1, 1, point.originY - 20, point.originY + 20);
-        point.x = x;
-        point.y = y;
-        point.noiseOffsetX += noiseStep;
-        point.noiseOffsetY += noiseStep;
-    }
+    paths.forEach((path, idx)=>{
+        path.setAttribute('d', _spline.spline(pointsArr[idx], 1, true));
+        for(var i = 0, len = pointsArr[idx].length; i < len; i++){
+            const point = pointsArr[idx][i];
+            const nX = noise(point.noiseOffsetX, point.noiseOffsetX);
+            const nY = noise(point.noiseOffsetY, point.noiseOffsetY);
+            const x = map(nX, -1, 1, point.originX - 20, point.originX + 20);
+            const y = map(nY, -1, 1, point.originY - 20, point.originY + 20);
+            point.x = x;
+            point.y = y;
+            point.noiseOffsetX += noiseStep;
+            point.noiseOffsetY += noiseStep;
+        }
+    });
     requestAnimationFrame(animate);
 })();
 function map(n, start1, end1, start2, end2) {
