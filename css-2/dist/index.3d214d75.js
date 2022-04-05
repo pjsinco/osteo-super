@@ -522,9 +522,7 @@ document.addEventListener('DOMContentLoaded', superReveal, false);
 /**
  * Help from: https://georgefrancis.dev/writing/build-a-smooth-animated-blob-with-svg-and-js/
  *
- */ const pathBlue = document.querySelector('#blobBlue path');
-console.log(pathBlue);
-const root = document.documentElement;
+ */ const root = document.documentElement;
 const paths = document.querySelectorAll('#blobs > [id^="blob"] path');
 function createPoints() {
     const points1 = [];

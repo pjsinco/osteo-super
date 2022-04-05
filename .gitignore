@@ -1,5 +1,7 @@
 node_modules
 .parcel-cache
+dist/
+css-2/dist/*/
 
 *.sw*
 .DS_*
