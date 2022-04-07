@@ -30,6 +30,13 @@ $hap-colors: (
   & > div.swiper {
     display: flex;
   }
+
+  &__title {
+    margin-bottom: 8px;
+    font-size: 0.875em;
+    font-weight: 600;
+    color: #000066;
+  }
 }
 
 .hap-card {
