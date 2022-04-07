@@ -27,6 +27,28 @@ $hap-colors: (
   max-width: 1140px;
   margin: 0 auto;
 
+  &::before,
+  &::after, {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 25%;
+    z-index: 4;
+  }
+
+  &::before {
+    left: 0;
+    transform: translateX(-100%);
+    background-image: linear-gradient(to left, rgba(255, 255, 255, 0), rgb(255,255,255,) 50%);
+  }
+
+  &::after {
+    right: 0;
+    transform: translateX(100%);
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0), rgb(255,255,255,) 50%);
+  }
+
   & > div.swiper {
     display: flex;
   }
