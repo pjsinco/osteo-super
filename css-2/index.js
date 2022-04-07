@@ -41,7 +41,7 @@ const pointsArr = Array.from(paths).map(path => {
 });
 
 const simplex = new SimplexNoise();
-let noiseStep = 0.0005;
+let noiseStep = 0.0002;
 
 function noise(x, y) {
   return simplex.noise2D(x, y);
@@ -97,3 +97,32 @@ function superReveal() {
     document.getElementById('superFig').classList.add('loaded');
   }
 }
+
+const hapSwiper = new Swiper('#happening > .swiper', {
+  slidesPerView: 4,
+  spaceBetween: 12,
+  breakpoints: {
+    480: {
+      slidesPerView: 1,
+      spacebetween: 20,
+    },
+    640: {
+      slidesPerView: 2,
+      spacebetween: 12,
+    },
+    767: {
+      slidesPerView: 3,
+    },
+    900: {
+      slidesPerView: 4,
+    },
+  },
+  navigation: {
+    nextEl: '.swiper-button-next-unique',
+    prevEl: '.swiper-button-prev-unique',
+  },
+
+  //centeredSlides: true,
+  //centeredSlidesBound: true,
+});
+console.log(hapSwiper);

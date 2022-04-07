@@ -549,7 +549,7 @@ const pointsArr = Array.from(paths).map((path)=>{
     return createPoints();
 });
 const simplex = new _simplexNoiseDefault.default();
-let noiseStep = 0.0005;
+let noiseStep = 0.0002;
 function noise(x, y) {
     return simplex.noise2D(x, y);
 }
@@ -588,7 +588,28 @@ function superReveal() {
         });
         document.getElementById('superFig').classList.add('loaded');
     }
-}
+} //const hapSwiper = new Swiper('#happening > .swiper-container', {
+ //  slidesPerView: 4,
+ //  spaceBetween: 12,
+ //  breakpoints: {
+ //    480: {
+ //      slidesPerView: 1,
+ //      spacebetween: 20,
+ //    },
+ //    640: {
+ //      slidesPerView: 2,
+ //      spacebetween: 12,
+ //    },
+ //    767: {
+ //      slidesPerView: 3,
+ //    },
+ //    900: {
+ //      slidesPerView: 4,
+ //    },
+ //  },
+ //  //centeredSlides: true,
+ //  //centeredSlidesBound: true,
+ //});
 
 },{"@georgedoescode/spline":"7yCSR","simplex-noise":"FTQ4k","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"7yCSR":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
