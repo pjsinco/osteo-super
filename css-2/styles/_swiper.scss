@@ -10,4 +10,119 @@
   .swiper-slide {
     height: auto;
   }
+
+
+  .swiper-button-next-unique {
+    right: 0;
+    transform: translate(50%, -50%) scaleX(-1);
+
+    @media screen and (min-width: 900px) {
+      right: -10px;
+      transform: translate(100%, -50%) scaleX(-1);
+    };
+  }
+
+  .swiper-button-prev-unique {
+    left: 0;
+    transform: translate(-50%, -50%);
+
+    @media screen and (min-width: 900px) {
+      left: -10px;
+      transform: translate(-100%, -50%);
+    };
+  }
+
+  .swiper-button-disabled {
+    display: none;
+  }
+
+  .swiper-pagination-bullets.swiper-pagination-horizontal {
+    bottom: -24px;
+  }
+
+
+
+
+
+  //	@media (min-width: 31.25em) {
+  //		.swiper-wrapper {
+  //
+  //			/* swiper is disabled at this breakpoint */
+  //			/* wrap slides  */
+  //			flex-wrap: wrap;
+  //
+  //			width: 100%;
+  //		}
+  //	}
+  //
+  //		.swiper-slide {
+  //			/* a single column layout */
+  //			width: 100%;
+  //		}
+  //
+  //		@media (min-width: 31.25em) {
+  //			.swiper-slide  {
+  //				/* swiper is disabled at this breakpoint */
+  //				/* going for a 2 column layout here */
+  //				width: 50%;
+  //			}
+  //		}
+  //
+  //		@media (min-width: 43.75em) {
+  //			.swiper-slide  {
+  //				/* upping it to a 3 column layout */
+  //				width: 33.33333333333%;
+  //			}
+  //		}
+  //
+  //		@media (min-width: 53em) {
+  //			.swiper-slide  {
+  //				/* and finally the 4 column layout */
+  //				width: 25%;
+  //			}
+  //		}
+  //
+  //		.swiper-pagination {
+  //			/* show on small viewports */
+  //			display: block;
+  //		}
+  //
+  //		@media (min-width: 31.25em) {
+  //			.swiper-pagination {
+  //				/* swiper is disabled at this breakpoint */
+  //				display: none;
+  //			}
+  //		}
+
+  .swiper-button-next-unique,
+  .swiper-button-prev-unique {
+    @media screen and (max-width: 767px) {
+      display: none;
+    };
+
+    position: absolute;
+    top: 50%;
+    z-index: 2;
+    width: 2.5em;
+    height: 2.5em;
+    cursor: pointer;
+    opacity: .9;
+    border: 0.1em solid rgba($navy, 0.4);
+    background-color: #fff;
+    background-position: 43%;
+    background-repeat: no-repeat;
+    background-image: url("data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPScxLjEnIHhtbG5zPSdodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZycgeG1sbnM6eGxpbms9J2h0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsnIHg9JzBweCcgeT0nMHB4JyB2aWV3Qm94PScwIDAgMTYgMzYnIHdpZHRoPScxNnB4JyBoZWlnaHQ9JzM2cHgnIHByZXNlcnZlQXNwZWN0UmF0aW89J2RlZmVyJyBzaGFwZS1yZW5kZXJpbmc9J2dlb21ldHJpY1ByZWNpc2lvbic+PGcgZmlsbD0nIzIyNTI4ZSc+PHBhdGggZD0nTTE0LDMxLjU0QTEuNSwxLjUsMCwwLDEsMTMsMzEuMWwtMTItMTJhMS41LDEuNSwwLDAsMSwwLTIuMTJsMTItMTJBMS41LDEuNSwwLDAsMSwxNS4wOCw3TDQuMSwxOGwxMSwxMUExLjUsMS41LDAsMCwxLDE0LDMxLjU0WicvPjwvZz48L3N2Zz4K");
+    background-size: 30% auto;
+    border-radius: 50%;
+    box-shadow: 2px 2px 6px 0px rgba(#000000, 0.15);
+    //transition: opacity 0.3s, background-color 0.3s, background-image 0.3s, border 0.3s;
+    transition: opacity 0.3s, background-color 0.3s, border 0.3s;
+
+    &:hover {
+      opacity: 0.98;
+      background-color: rgba(255, 255, 255, 0.98);
+      //background-image: url("data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPScxLjEnIHhtbG5zPSdodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZycgeG1sbnM6eGxpbms9J2h0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsnIHg9JzBweCcgeT0nMHB4JyB2aWV3Qm94PScwIDAgMTYgMzYnIHdpZHRoPScxNnB4JyBoZWlnaHQ9JzM2cHgnIHByZXNlcnZlQXNwZWN0UmF0aW89J2RlZmVyJyBzaGFwZS1yZW5kZXJpbmc9J2dlb21ldHJpY1ByZWNpc2lvbic+PGcgZmlsbD0nIzQ2YzdjNyc+PHBhdGggZD0nTTE0LDMxLjU0QTEuNSwxLjUsMCwwLDEsMTMsMzEuMWwtMTItMTJhMS41LDEuNSwwLDAsMSwwLTIuMTJsMTItMTJBMS41LDEuNSwwLDAsMSwxNS4wOCw3TDQuMSwxOGwxMSwxMUExLjUsMS41LDAsMCwxLDE0LDMxLjU0WicvPjwvZz48L3N2Zz4K");
+      border-color: rgba($sea, 0.4);
+    }
+  }
 }

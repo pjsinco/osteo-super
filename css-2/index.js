@@ -117,6 +117,11 @@ const hapSwiper = new Swiper('#happening > .swiper', {
       slidesPerView: 4,
     },
   },
+  navigation: {
+    nextEl: '.swiper-button-next-unique',
+    prevEl: '.swiper-button-prev-unique',
+  },
+
   //centeredSlides: true,
   //centeredSlidesBound: true,
 });
