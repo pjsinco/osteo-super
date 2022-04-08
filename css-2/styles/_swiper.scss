@@ -14,21 +14,21 @@
 
   .swiper-button-next-unique {
     right: 0;
-    transform: translate(50%, -50%) scaleX(-1);
+    transform: translate(50%, calc(-50% + 14px)) scaleX(-1);
 
     @media screen and (min-width: 900px) {
       right: -10px;
-      transform: translate(100%, -50%) scaleX(-1);
+      transform: translate(100%, calc(-50% + 14px)) scaleX(-1);
     };
   }
 
   .swiper-button-prev-unique {
     left: 0;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, calc(-50% + 14px));
 
     @media screen and (min-width: 900px) {
       left: -10px;
-      transform: translate(-100%, -50%);
+      transform: translate(-100%, calc(-50% + 14px));
     };
   }
 
@@ -107,22 +107,17 @@
     height: 2.5em;
     cursor: pointer;
     opacity: .9;
-    border: 0.1em solid rgba($navy, 0.4);
     background-color: #fff;
     background-position: 43%;
     background-repeat: no-repeat;
-    background-image: url("data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPScxLjEnIHhtbG5zPSdodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZycgeG1sbnM6eGxpbms9J2h0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsnIHg9JzBweCcgeT0nMHB4JyB2aWV3Qm94PScwIDAgMTYgMzYnIHdpZHRoPScxNnB4JyBoZWlnaHQ9JzM2cHgnIHByZXNlcnZlQXNwZWN0UmF0aW89J2RlZmVyJyBzaGFwZS1yZW5kZXJpbmc9J2dlb21ldHJpY1ByZWNpc2lvbic+PGcgZmlsbD0nIzIyNTI4ZSc+PHBhdGggZD0nTTE0LDMxLjU0QTEuNSwxLjUsMCwwLDEsMTMsMzEuMWwtMTItMTJhMS41LDEuNSwwLDAsMSwwLTIuMTJsMTItMTJBMS41LDEuNSwwLDAsMSwxNS4wOCw3TDQuMSwxOGwxMSwxMUExLjUsMS41LDAsMCwxLDE0LDMxLjU0WicvPjwvZz48L3N2Zz4K");
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg%20version%3D%271.1%27%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20viewBox%3D%270%200%2016%2036%27%3E%3Cg%20fill%3D%27%23222%27%3E%3Cpath%20d%3D%27M14%2C31.54A1.5%2C1.5%2C0%2C0%2C1%2C13%2C31.1l-12-12a1.5%2C1.5%2C0%2C0%2C1%2C0-2.12l12-12A1.5%2C1.5%2C0%2C0%2C1%2C15.08%2C7L4.1%2C18l11%2C11A1.5%2C1.5%2C0%2C0%2C1%2C14%2C31.54Z%27%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E");
     background-size: 30% auto;
     border-radius: 50%;
     box-shadow: 2px 2px 6px 0px rgba(#000000, 0.15);
-    //transition: opacity 0.3s, background-color 0.3s, background-image 0.3s, border 0.3s;
-    transition: opacity 0.3s, background-color 0.3s, border 0.3s;
+    transition: opacity 0.3s, background-color 0.3s;
 
     &:hover {
       opacity: 0.98;
-      background-color: rgba(255, 255, 255, 0.98);
-      //background-image: url("data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPScxLjEnIHhtbG5zPSdodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZycgeG1sbnM6eGxpbms9J2h0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsnIHg9JzBweCcgeT0nMHB4JyB2aWV3Qm94PScwIDAgMTYgMzYnIHdpZHRoPScxNnB4JyBoZWlnaHQ9JzM2cHgnIHByZXNlcnZlQXNwZWN0UmF0aW89J2RlZmVyJyBzaGFwZS1yZW5kZXJpbmc9J2dlb21ldHJpY1ByZWNpc2lvbic+PGcgZmlsbD0nIzQ2YzdjNyc+PHBhdGggZD0nTTE0LDMxLjU0QTEuNSwxLjUsMCwwLDEsMTMsMzEuMWwtMTItMTJhMS41LDEuNSwwLDAsMSwwLTIuMTJsMTItMTJBMS41LDEuNSwwLDAsMSwxNS4wOCw3TDQuMSwxOGwxMSwxMUExLjUsMS41LDAsMCwxLDE0LDMxLjU0WicvPjwvZz48L3N2Zz4K");
-      border-color: rgba($sea, 0.4);
     }
   }
 }

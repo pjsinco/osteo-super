@@ -41,7 +41,7 @@ const pointsArr = Array.from(paths).map(path => {
 });
 
 const simplex = new SimplexNoise();
-let noiseStep = 0.0002;
+let noiseStep = 0.0003;
 
 function noise(x, y) {
   return simplex.noise2D(x, y);
