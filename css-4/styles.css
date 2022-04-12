@@ -1,0 +1,210 @@
+:root {
+  --font-family: proxima-nova, sans-serif;
+
+  --color-dark: #222;
+  --color-aoa-blue: #006;
+  --color-sea-serpent: #11c7eb;
+  --color-teal: #22a49c;
+  --color-gold: #fa0;
+  --color-warm: #f9f7f5;
+
+  --blueStartColor: #8cbfed;
+  --blueStopColor: #6785a1;
+  --yellowStartColor: #fffecc;
+  --yellowStopColor: #fffc66;
+  --seaStartColor: #27e5f7;
+  --seaStopColor: #11c7eb;
+  --whiteStartColor: #f9f7f5;
+  --whiteStopColor: #f9f7f5;
+
+  --primary-color: var(--color-aoa-blue);
+
+  --font-color-dark: var(--color-dark);
+
+  --bezier-timing: 0.175, 0.885, 0.32, 1.275;
+}
+
+html {
+  font-size: 100%;
+  line-height: 1;
+}
+
+body {
+  font-family: var(--font-family);
+  font-size: 16px;
+}
+
+html::after,
+body::before {
+  content: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.wrap {
+  max-width: 1140px;
+  height: 100%;
+  margin: 0 auto;
+}
+
+.etc {
+  height: 800px;
+  width: 100%;
+  position: relative;
+  margin-top: 9rem;
+  background-color: rebeccapurple;
+}
+
+.etc:before {
+  content: 'Etc.';
+  position: absolute;
+  padding: 1rem;
+  font-family: var(--font-family);
+  font-size: 24px;
+}
+
+.blobs {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: -10%;
+}
+
+.blob {
+  position: absolute;
+  height: auto;
+  width: 100%;
+}
+
+.blob svg {
+  width: 100%;
+  height: 100%;
+  /*width: 90vmin;*/
+  /*height: 90vmin;*/
+}
+
+.blob--blue {
+  transform: translateX(50%);
+}
+
+.blob--yellow {
+  transform: translate(15%, -7%);
+  mix-blend-mode: lighten;
+}
+
+.blob--white {
+  transform: translate(-15%, 20%);
+}
+
+.blob--sea {
+  transform: translate(-19%, -0%) rotate(50deg);
+}
+
+.super {
+  position: relative;
+  overflow: hidden;
+}
+
+.super-fig {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.super-fig.loaded:after {
+  content: '';
+  position: absolute;
+  left: -32px;
+  right: -32px;
+  top: 20%;
+  bottom: 0;
+  z-index: 1;
+  background-image: linear-gradient(
+    to top,
+    #fff 30%,
+    rgba(255, 255, 255, 0.02)
+  );
+}
+
+.super-fig__body {
+  position: absolute;
+  z-index: 2;
+  bottom: 180px;
+}
+
+.super-fig__kicker {
+  font-size: 12px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  text-align: center;
+  color: var(--color-sea-serpent);
+}
+
+.super-fig__title {
+  margin-top: 27px;
+  margin-bottom: 24px;
+  font-size: 44px;
+  line-height: 1;
+  text-align: center;
+  font-weight: 800;
+  color: var(--primary-color);
+}
+
+.super-fig__blurb {
+  max-width: 654px;
+  margin: 0 auto;
+  font-size: 18px;
+  letter-spacing: 0;
+  line-height: 1.55;
+  color: var(--font-color-dark);
+}
+
+.super-fig__link {
+  position: relative;
+  padding-right: 24px;
+  font-weight: 600;
+  text-decoration: none;
+  color: var(--color-teal);
+}
+
+.super-fig__link:after {
+  content: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMThweCIgaGVpZ2h0PSIxMnB4IiB2aWV3Qm94PSIwIDAgMTggMTIiIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+CiAgICA8ZyBpZD0iU3ltYm9scyIgc3Ryb2tlPSJub25lIiBzdHJva2Utd2lkdGg9IjEiIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+CiAgICAgICAgPHBvbHlsaW5lIGlkPSJQYXRoLTUiIHN0cm9rZT0iIzIyYTQ5YyIgc3Ryb2tlLXdpZHRoPSIxLjYiIHBvaW50cz0iOS42NzgzNjI1NyAwIDE1IDUgOS42NzgzNjI1NyAxMCI+PC9wb2x5bGluZT4KICAgICAgICA8bGluZSB4MT0iMTQuNiIgeTE9IjUiIHgyPSIwLjQiIHkyPSI1IiBpZD0iTGluZSIgc3Ryb2tlPSIjMjJhNDljIiBzdHJva2Utd2lkdGg9IjEuNiIgc3Ryb2tlLWxpbmVjYXA9InNxdWFyZSI+PC9saW5lPgogICAgPC9nPgo8L3N2Zz4K);
+  position: absolute;
+  top: 0;
+  margin-left: 7px;
+  transition: transform 0.2s ease-out;
+}
+
+.super-fig__link:hover:after {
+  transform: translate3d(3px, 0, 0);
+}
+
+.super-fig__fig {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  max-width: 1140px;
+  height: 100%;
+  margin: 0 auto;
+}
+
+.super-fig__bg {
+  position: absolute;
+  top: 240px;
+  left: 20px;
+  right: -10px;
+  bottom: -40px;
+  z-index: -1;
+  background-image: linear-gradient(to bottom, var(--color-sea-serpent), #fff);
+}
+
+.super-fig__image {
+  /*max-width: 1204px;*/
+  height: auto;
+}
