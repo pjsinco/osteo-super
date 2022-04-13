@@ -114,8 +114,12 @@ $hap-colors: (
   }
 
   &__link {
-    display: block;
-    height: 100%;
+    //display: block;
+    //height: 100%;
+
+    &:hover .link-arrow:after {
+      transform: translate3d(6px, 0, 0);
+    }
   }
 
   &__footer-link {

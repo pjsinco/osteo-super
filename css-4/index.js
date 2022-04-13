@@ -106,14 +106,14 @@ const hapSwiper = new Swiper('#happening > .swiper', {
       slidesPerView: 1,
       spacebetween: 20,
     },
-    640: {
+    680: {
       slidesPerView: 2,
       spacebetween: 12,
     },
-    767: {
+    867: {
       slidesPerView: 3,
     },
-    900: {
+    1000: {
       slidesPerView: 4,
     },
   },
