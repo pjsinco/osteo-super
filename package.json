@@ -1,18 +1,21 @@
 {
-  "name": "Sites",
+  "name": "css-2",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "source": "src/index.html",
   "scripts": {
-    "dev": "live-server",
-    "start": "npm run dev"
+    "start": "parcel",
+    "build": "parcel build"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "@parcel/transformer-sass": "^2.4.1",
-    "live-server": "^1.2.1",
-    "sass": "^1.49.11"
+    "parcel": "^2.4.1"
+  },
+  "dependencies": {
+    "@georgedoescode/spline": "^1.0.1",
+    "simplex-noise": "^3.0.1"
   }
 }
